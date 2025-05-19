@@ -39,4 +39,4 @@ fi
 
 # === Start Laravel app ===
 echo "[entrypoint] Starting Laravel Octane..."
-exec php artisan octane:start --server=swoole --host=0.0.0.0 --port=8000
+exec php artisan octane:start --server=roadrunner --host=0.0.0.0 --port=8000
