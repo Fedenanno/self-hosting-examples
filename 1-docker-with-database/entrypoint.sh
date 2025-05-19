@@ -38,5 +38,5 @@ if [[ "$AUTO_DB_MIGRATE" == "true" ]]; then
 fi
 
 # === Start Laravel app ===
-echo "[entrypoint] Starting Laravel Octane..."
-exec php artisan octane:start --server=roadrunner --host=0.0.0.0 --port=8000
+echo "[entrypoint] Launching original CMD: $@"
+exec "$@"
