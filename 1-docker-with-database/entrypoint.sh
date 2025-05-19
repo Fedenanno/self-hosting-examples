@@ -4,13 +4,13 @@ set -e
 echo "[entrypoint] Preparing Laravel environment..."
 
 # === Fix permissions ===
-chown -R 1000:1000 /var/www/html/storage /var/www/html/bootstrap/cache
-chmod -R u+rwX /var/www/html/storage /var/www/html/bootstrap/cache
+# chown -R 1000:1000 /var/www/html/storage /var/www/html/bootstrap/cache
+# chmod -R u+rwX /var/www/html/storage /var/www/html/bootstrap/cache
 
 # === Ensure .env is loaded ===
-if [ -f ".env" ]; then
-  export $(grep -v '^#' .env | xargs)
-fi
+# if [ -f ".env" ]; then
+#   export $(grep -v '^#' .env | xargs)
+# fi
 
 # === Generate APP_KEY if missing ===
 if [ -z "$APP_KEY" ] || [[ "$APP_KEY" == '""' ]]; then
